@@ -1,0 +1,46 @@
+/* Duy Anh Nguyen
+Sept. 30
+"Employee's pay calculator"
+This program written to help calculate an employee's pay based on hours worked, hourly rate, tax. It then prints the result 
+after all taxes have been calculated. */
+
+#include <iostream>
+using namespace std;
+
+int main(void)
+{
+	float hour;                // Hours they work
+	float hour_rate;           // Hour rate
+	float gr_pay;              // Gross pay
+	float tax_rate;            // Taxes
+	float tax_c;               // Tax cost
+	float c_pen;               // "Canada Pension" 4.95%
+	float em_ins;              // "Employee Insurance" 1.88%
+	float n_pay;               // Net pay
+
+	// Get info
+	cout << "This program written to help calculate an employee's pay based on hours worked, hourly rate, tax." << endl;
+	cout << "Please enter the following information!" << endl;
+	cout << "How many hour did you work?          ";
+	cin >> hour;
+	cout << "How much do you make per hour?       ";
+	cin >> hour_rate;
+	cout << "What is the tax rate (as a percent)? ";
+	cin >> tax_rate;
+	
+	// Calculate
+	gr_pay = hour*hour_rate;
+	tax_c = (tax_rate / 100)*gr_pay;
+	c_pen = 0.0495*gr_pay;
+	em_ins = 0.0188*gr_pay;
+	n_pay = gr_pay - tax_c - c_pen - em_ins;
+	
+	// Print
+	cout << "Your 'Gross Pay' = " << hour << " hours at $" << hour_rate << "/hr = $" << gr_pay << endl;
+	cout << "Income Tax = " << tax_rate << "% of $" << gr_pay << " = $" << tax_c << endl;
+	cout << "Canada Pension = 4.95% of $" << gr_pay << " = $" << c_pen << endl;
+	cout << "Employement Insurance = 1.88% of $" << gr_pay << " = $" << em_ins << endl;
+	cout << "Net pay = $" << gr_pay << " - $" << tax_c << " - $" << c_pen << " -  $" << em_ins << " = $" << n_pay << endl;
+
+	return 0;
+} // Main
