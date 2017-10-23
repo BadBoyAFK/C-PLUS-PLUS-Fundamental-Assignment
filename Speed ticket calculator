@@ -1,0 +1,33 @@
+/* Duy Anh Nguyen
+Sept. 29
+"Speed ticket calculator"
+This program's purpose is to calculate and print the cost of a speeding ticket based on posted speed limit.*/
+
+#include <iostream>
+using namespace std;
+
+int main(void)
+{
+	float money;               // Total many the ticket cost
+	int lim_sp;                // Speed limit
+	int t_sp;                  // Speed you travel
+	int ex_sp;                 // Extral speed from the limit
+
+	// Get info
+	cout << "This program's purpose is to calculate and print the cost of a speeding ticket based on posted speed limit" << endl;
+	cout << "Please enter the following information!" << endl;
+	cout << "What is the speed limit (km/hr)?       ";
+	cin >> lim_sp;
+	cout << "How fast was the driver going (km/hr)? ";
+	cin >> t_sp;
+
+	// Calculate info
+	money = (t_sp - lim_sp)*7.70 + 100;
+	ex_sp = t_sp - lim_sp;
+
+	// Print info
+	cout << "As a result, the diver was going " << ex_sp << "km/hr above the speed limit." << endl;
+	cout << "The ticket would cost $" << money << " in total for driving " << ex_sp << "km/hr above the speed limit." << endl;
+
+	return 0;
+} // Main
