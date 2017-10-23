@@ -1,0 +1,61 @@
+/* Duy Anh Nguyen
+Oct. 1
+"Words pattern"
+This program written to prints any possible pattern of 4 words.*/
+
+#include <iostream>
+using namespace std;
+
+int main(void)
+{
+	char w_1;             // Word number 1
+	char w_2;             // Word number 2
+	char w_3;             // Word number 3
+	char w_4;             // Word number 4
+
+	// Get info
+	cout << "This program written to prints any possible pattern of 4 words." << endl;
+	cout << "Please enter the following information!" << endl;
+
+	cout << "What is the first letter?  ";
+	cin >> w_1;
+	cout << "What is the second letter? ";
+	cin >> w_2;
+	cout << "What is the third letter?  ";
+	cin >> w_3;
+	cout << "What is the fourth letter? ";
+	cin >> w_4;
+
+	// Print pattern
+	cout << "24 possible pattern: " << endl;
+	
+	cout << w_1 << w_2 << w_3 << w_4 << endl;
+	cout << w_1 << w_2 << w_4 << w_3 << endl;
+	cout << w_1 << w_3 << w_4 << w_2 << endl;
+	cout << w_1 << w_3 << w_2 << w_4 << endl;
+	cout << w_1 << w_4 << w_2 << w_3 << endl;
+	cout << w_1 << w_4 << w_3 << w_2 << endl;
+	
+	cout << w_2 << w_3 << w_4 << w_1 << endl;
+	cout << w_2 << w_3 << w_1 << w_4 << endl;
+	cout << w_2 << w_4 << w_1 << w_3 << endl;
+	cout << w_2 << w_4 << w_3 << w_1 << endl;
+	cout << w_2 << w_1 << w_3 << w_4 << endl;
+	cout << w_2 << w_1 << w_4 << w_3 << endl;
+	
+	cout << w_3 << w_4 << w_1 << w_2 << endl;
+	cout << w_3 << w_4 << w_2 << w_1 << endl;
+	cout << w_3 << w_1 << w_2 << w_4 << endl;
+	cout << w_3 << w_1 << w_4 << w_2 << endl;
+	cout << w_3 << w_2 << w_4 << w_1 << endl;
+	cout << w_3 << w_2 << w_1 << w_4 << endl;
+
+	cout << w_4 << w_1 << w_2 << w_3 << endl;
+	cout << w_4 << w_1 << w_3 << w_2 << endl;
+	cout << w_4 << w_2 << w_3 << w_1 << endl;
+	cout << w_4 << w_2 << w_1 << w_3 << endl;
+	cout << w_4 << w_3 << w_1 << w_2 << endl;
+	cout << w_4 << w_3 << w_2 << w_1 << endl;
+
+	return 0;
+} // Main
