@@ -1,0 +1,48 @@
+/* Duy Anh Nguyen
+Oct. 3
+"Pocket change calculator"
+This program's purpose is to ask the user how many twoonies, loonies, quarters, dimes, nickels, and pennies.
+Then calculate the total money in cents and dollars.*/
+
+#include <iostream>
+using namespace std;
+
+int main(void)
+{
+	int two;                      // How many twoonies
+	int loo;                      // How many loonies
+	int qua;                      // How many quarters
+	int dim;                      // How many dimes
+	int nic;                      // How many nickels
+	int pen;                      // How many pennies
+	int dollar;                   // Total dollars
+	int cent;                     // Total cents
+	int t_cent;                   // Total cents
+
+	// Get info
+	cout << "This program's purpose is to ask the user and calculate change." << endl;
+	cout << "Please enter the following information!" << endl;
+
+	cout << "How many twoonies do you have? ";
+	cin >> two;
+	cout << "How many loonies do you have?  ";
+	cin >> loo;
+	cout << "How many quarters do you have? ";
+	cin >> qua;
+	cout << "How many dimes do you have?    ";
+	cin >> dim;
+	cout << "How many nickels do you have?  ";
+	cin >> nic;
+	cout << "How many pennies do you have?  ";
+	cin >> pen;
+
+	// Calculate info
+	t_cent = two * 200 + loo * 100 + qua * 25 + dim * 10 + nic * 5 + pen;
+	dollar = t_cent / 100;
+	cent = t_cent % 100;
+
+	// Print
+	cout << "In total, you have " << t_cent << " cents, or " << dollar << " dollars and " << cent << " cents." << endl;
+
+	return 0;
+} // Main
