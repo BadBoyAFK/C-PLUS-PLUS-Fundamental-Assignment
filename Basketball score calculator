@@ -1,0 +1,58 @@
+/*Duy Anh Nguyen
+Sept.28
+"Basketball score calculator"
+This program written to help calculate percentage of shots made overall and total points.*/
+
+#include <iostream>
+using namespace std;
+
+int main(void)
+{
+	int p1_attempt;              // 1 point shots that the team attempted
+	int p1_make;                 // 1 point shots that the team make
+	int p1_per;                  // 1 point shots the team make out of all attempted in (percentage)
+
+	int p2_attempt;              // 2 point shots that the team attempted
+	int p2_make;                 // 2 point shots that the team make
+	int p2_per;                  // 2 point shots the team make out of all attempted in (percentage)
+
+	int p3_attempt;              // 3 point shots that the team attempted
+	int p3_make;                 // 3 point shots that the team make
+	int p3_per;                  // 3 point shots the team make out of all attempted in (percentage)
+
+	int total_point;             // The total points
+
+    // Get input
+	cout << "This program written to help calculate percentage of shots made overall and total points." << endl;
+	cout << "Please enter the following information! " << endl;
+
+	cout << "How many 1-pointers did the team attempt? ";
+	cin >> p1_attempt;
+	cout << "How many 1-pointers did the team make?    ";
+	cin >> p1_make;
+
+	cout << "How many 2-pointers did the team attempt? ";
+	cin >> p2_attempt;
+	cout << "How many 2-pointers did the team make?    ";
+	cin >> p2_make;
+
+	cout << "How many 3-ponters did the team attempt?  ";
+	cin >> p3_attempt;
+	cout << "How manu 3-pointers did the team make?    ";
+	cin >> p3_make;
+
+	//calculate info
+	p1_per = 100 * p1_make / p1_attempt;
+	p2_per = 100 * p2_make / p2_attempt;
+	p3_per = 100 * p3_make / p3_attempt;
+
+	total_point = p1_make * 1 + p2_make * 2 + p3_make * 3;
+
+	//print info
+	cout << "In total, the team had score " << total_point << "." << endl;
+	cout << p1_make << " for " << p1_attempt << " (" << p1_per << "%) " << "on 1-pointers shots." << endl;
+	cout << p2_make << " for " << p2_attempt << " (" << p2_per << "%) " << "on 2-pointers shots." << endl;
+	cout << p3_make << " for " << p3_attempt << " (" << p3_per << "%) " << "on 3-pointers shots." << endl;
+
+	return 0;
+} // Main
