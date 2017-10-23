@@ -1,0 +1,86 @@
+/* Duy Anh Nguyen
+Oct.3
+"Binary-Decimal converter"
+This program was written to help convert binary to decimal and decimal to binary.*/
+
+#include <iostream>
+using namespace std;
+
+int main(void)
+{
+	int bin1;          // First binary number
+	int bin2;          // Second binary number
+	int bin3;          // Third binary number
+	int bin4;          // Fourth binary number
+	int bin5;          // Fifth binary number
+	int bin6;          // Sixth binary number
+	int bin7;          // Seventh binary number
+	int bin8;          // Eighth binary number 
+	int bin_dec;       // Binary to Decimal
+
+	int dec;           // Decimal number want to convert
+	int temp;          // Temporary number
+	int dec_bin1;      // Decimal to binary number 1
+	int dec_bin2;      // Decimal to binary number 2
+	int dec_bin3;      // Decimal to binary number 3
+	int dec_bin4;      // Decimal to binary number 4
+	int dec_bin5;      // Decimal to binary number 5
+	int dec_bin6;      // Decimal to binary number 6
+	int dec_bin7;      // Decimal to binary number 7
+	int dec_bin8;      // Decimal to binary number 8
+
+	//Get binary info
+	cout << "This program was written to help convert binary to decimal and decimal to binary." << endl;
+	cout << "Please enter the following information!" << endl;
+
+	cout << "What is the first binary number (left to right)?   ";
+	cin >> bin1;
+	cout << "What is the second binary number (left to right)?  ";
+	cin >> bin2;
+	cout << "What is the third binary number (left to right)?   ";
+	cin >> bin3;
+	cout << "What is the fourth binary number (left to right)?  ";
+	cin >> bin4;
+	cout << "What is the fifth binary number (left to right)?   ";
+	cin >> bin5;
+	cout << "What is the sixth binary number (left to right)?   ";
+	cin >> bin6;
+	cout << "What is the seventh binary number (left to right)? ";
+	cin >> bin7;
+	cout << "What is the eighth binary number (left to right)?  ";
+	cin >> bin8;
+
+	// Calculate binary to decimal
+	bin_dec = bin8 * 1 + bin7 * 2 + bin6 * 4 + bin5 * 8 + bin4 * 16 + bin3 * 32 + bin2 * 64 + bin1 * 128;
+
+	// Print Binary to Decimal
+	cout << "The binary you enter is: " << bin1 << bin2 << bin3 << bin4 << bin5 << bin6 << bin7 << bin8 << endl;
+	cout << "The binary you enter has a decimal value of " << bin_dec << endl;;
+
+	//Get info for decimal to binary
+	cout << "Please enter any decimal number less than or equal to 255. Enter it now: ";
+	cin >> dec;
+
+	//Calculate decimal info
+	dec_bin1 = dec % 2;
+	temp = dec / 2;
+	dec_bin2 = temp % 2;
+	temp = temp / 2;
+	dec_bin3 = temp % 2;
+	temp = temp / 2;
+	dec_bin4 = temp % 2;
+	temp = temp / 2;
+	dec_bin5 = temp % 2;
+	temp = temp / 2;
+	dec_bin6 = temp % 2;
+	temp = temp / 2;
+	dec_bin7 = temp % 2;
+	temp = temp / 2;
+	dec_bin8 = temp % 2;
+
+	//Print Decimal to Binary
+	cout << "The decimal number " << dec << " is " << dec_bin8 << dec_bin7 << dec_bin6 << dec_bin5 << dec_bin4 << dec_bin3
+		<< dec_bin2 << dec_bin1 << " in binary." << endl;
+
+	return 0;
+} //Main
